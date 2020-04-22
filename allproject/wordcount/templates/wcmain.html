@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content%}
+<div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">Word Count !</h1>
+              <p class="lead">http 메소드와 template과 view 느낌을 가져가는 word count페이지</p>
+            </div>
+          </div>
+
+
+    <form method="GET" action="{% url 'result'%}">
+        <textarea type="text" name="text"></textarea><br>
+        <button type="submit" class="btn btn-secondary btn-lg btn-block">단어의 개수는?</button>
+     </form>
+</div>
+{% endblock%}

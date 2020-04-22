@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content%}
+<div class="container">
+    <h1>Word Count !</h1>
+    <br>
+    <h3>입력한 문장</h3>
+    {{text}}
+
+    <h3>단어 종류</h3>
+    {% for i in splittext %}
+    <h6>{{i}}</h6>
+    {% endfor %}
+    <h3>단어 수</h3>
+    {{splittext|length}}
+    <br>
+    <a href="{%url 'wcmain'%}"><button>다시하기</button></a>
+
+</div>
+{% endblock%}
