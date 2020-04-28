@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{%block content%}
+<div class="container">
+    <h1>Form 새 글 작성</h1>
+    <form action="{%url 'fblogcreate' %}" method="POST">
+        {% csrf_token %}
+        <table>{{form.as_table}}</table>
+        <br>
+        <br>
+        <button type="submit">작성하기</button>
+    </form>
+
+</div>
+
+{%endblock%}

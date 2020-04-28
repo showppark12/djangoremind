@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'main',
     'wordcount',
     'blog',
+    'formblog',
 ]
 
 MIDDLEWARE = [

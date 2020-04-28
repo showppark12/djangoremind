@@ -6,4 +6,5 @@ urlpatterns = [
     path('', include('main.urls')),
     path('wordcount/', include('wordcount.urls')),
     path('blog/', include('blog.urls')),
+    path('formblog/', include('formblog.urls')),
 ]

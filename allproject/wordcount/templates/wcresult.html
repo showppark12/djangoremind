@@ -7,8 +7,8 @@
     {{text}}
 
     <h3>단어 종류</h3>
-    {% for i in splittext %}
-    <h6>{{i}}</h6>
+    {% for i, in in word_dic %}
+    <h6>{{i}} : {{in}}</h6>
     {% endfor %}
     <h3>단어 수</h3>
     {{splittext|length}}

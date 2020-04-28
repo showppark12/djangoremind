@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<div class="container">
+    <h1>{{blog.title}}</h1>
+    <hr>
+    <h6>{{blog.date}}</h6>
+    <h3>{{blog.body}}</h3>
+    <br>
+    <a href="{% url 'fblogmain' %}">블로그 리스트</a><br>
+    <a href="{% url 'fblogupdate' blog.id %}">수정하기</a><br>
+    <a href="{% url 'fblogdelete' blog.id %}">삭제하기</a>
+</div>
+
+{%endblock%}
