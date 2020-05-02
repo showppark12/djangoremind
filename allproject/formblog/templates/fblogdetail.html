@@ -10,6 +10,22 @@
     <a href="{% url 'fblogmain' %}">블로그 리스트</a><br>
     <a href="{% url 'fblogupdate' blog.id %}">수정하기</a><br>
     <a href="{% url 'fblogdelete' blog.id %}">삭제하기</a>
+
+    <hr>
+    <h3>댓글 작성하기</h3>
+    내용 :
+    <form action="{% url 'ccreate' blog.id%}" method="POST">
+        {%csrf_token%}
+        <textarea name="Ctext" id="" cols="30" rows="10"></textarea><br>
+        <input type="submit" value="작성">
+    </form>
+    <hr>
+    <br>
+    <br>
+    {%for i in comments%}
+    <h2>작성자 : {{i.writer}}</h2>
+    <h3>내용 : {{i.text}}</h3>
+    {%endfor%}
 </div>
 
 {%endblock%}
